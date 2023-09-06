@@ -1,0 +1,100 @@
+// цвет
+$gray-1: #959595;
+$gray-2: #606060;
+$btncolor: linear-gradient(174.36deg, rgba(132, 213, 44, 0.36) 11.39%, rgba(23, 23, 34, 0) 189.78%);
+$darkgray-1: #30303d;
+$darkgray-2: #212129;
+$green: #85d62d;
+$darkgreen: #297019;
+
+body {
+	background-color: #171722;
+	font-family: 'Proxima Nova', sans-serif;
+}
+
+.container {
+	max-width: 1490px;
+	margin: 0 auto;
+	padding: 0 37px 0 28px;
+}
+
+.flex {
+	display: flex;
+}
+
+.input-wrap {
+	position: relative;
+}
+
+.input {
+	width: 100%;
+	padding: 12px 20px 12px 49px;
+	border: 1px solid $gray-1;
+	border-radius: 12px;
+
+	&:focus {
+		border-color: rgba(132, 213, 44, 0.36);
+	}
+}
+
+.darkbtn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: fit-content;
+	padding: 10px 18px;
+	border-radius: 10px;
+	background-color: #353542;
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #fff;
+	transition-property: color, background-color;
+	transition: 0.3s ease-in-out;
+
+	&::before {
+		content: '';
+		position: relative;
+		width: 24px;
+		height: 24px;
+		background: url('../media/sprite.svg#flower') center center / cover no-repeat;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		z-index: -1;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
+		border-radius: 10px;
+		background: linear-gradient(174.36deg, rgba(132, 213, 44, 0.36) 11.39%, rgba(23, 23, 34, 0) 189.78%);
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	input[type="checkbox"]:checked~& {
+		box-shadow: 0 3px 15px 0 #84D52C33;
+		background-color: $darkgray-2;
+	}
+
+	input[type="checkbox"]:not(:checked):hover~& {
+		background-color: darken(#353542, 4%);
+		box-shadow: 0 3px 15px 0 #ffffff27;
+
+		&::after {
+			background-color: #ffffff4d;
+		}
+	}
+}
+
+.main-results {
+	padding: 27px 0 0;
+}
+
+.main__body {
+	gap: 30px;
+}

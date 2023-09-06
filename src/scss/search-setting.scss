@@ -1,0 +1,56 @@
+.search-setting {
+	padding: 3px 0;
+
+	&__row {
+		align-items: center;
+		gap: 30px;
+		padding-left: 7px;
+		min-height: 28px;
+	}
+
+	&__results {
+		flex-shrink: 0;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		color: #fff;
+	}
+
+	&__list {
+		align-items: center;
+		gap: 11px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 1px;
+		width: fit-content;
+		flex-shrink: 0;
+		padding: 6px 8px;
+		border-radius: 20px;
+		background-color: #297019;
+		cursor: pointer;
+		transition: background-color 0.3s ease-in-out;
+
+		&:hover {
+			background-color: darken(#297019, 5%);
+		}
+	}
+
+	&__name {
+		width: fit-content;
+		flex-shrink: 0;
+		font-size: 12px;
+		line-height: 16px;
+		color: #fff;
+	}
+
+	&__btn {
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		background: url('../media/sprite.svg#x') center center / cover no-repeat;
+	}
+}
